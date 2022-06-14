@@ -7,7 +7,7 @@ app.use(bodyParser.json())
 
 app.get('/api/env', async (req, res) => {
 
-    const json = JSON.stringify(process.env) 
+    const json = JSON.stringify(process.env.CUSTOMCONNSTR_connection) 
 
     res.send(json)
 })
@@ -19,7 +19,7 @@ app.get('/api/hello', async (req, res) => {
 
 app.get('/api/merhaba', (req, res) => {
 
-    res.send('Merhaba Dünya')
+    res.send('Merhaba Dünyalı')
 })
 
 app.post('/api/name', (req, res) => {
